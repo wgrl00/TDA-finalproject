@@ -178,34 +178,29 @@
 
 <!-- all metamarks -->
 <xsl:template match="tei:metamark">
-<span class="metamarks {@hand}">
-  <xsl:choose>
+  <span class="metamark">
+    <xsl:choose>
 
-    <xsl:when test=". = '^'">
-      <span class="metamark roof">
-        <xsl:value-of select="."/>
-      </span>
-    </xsl:when>
+      <xsl:when test=".//tei:hi[@rend='circled']"> <!-- because the hi circled is nested within metamarks -->
+        <xsl:apply-templates/>
+      </xsl:when>
 
-    <xsl:when test=". = '-'">
-      <span class="metamark line">
-        <xsl:value-of select="."/>
-      </span>
-    </xsl:when>
-
-    <xsl:when test=". = 'L'">
-      <span class="metamark L">
-        <xsl:value-of select="."/>
-      </span>
-    </xsl:when>
-
-    <xsl:when test=". = 'X'">
-      <span class="metamark X">
-        <xsl:value-of select="."/>
-      </span>
-    </xsl:when>
-
-  </xsl:choose>
+      <xsl:when test="normalize-space(.) = '^'">
+        <span class="roof">^</span>
+      </xsl:when>
+      <xsl:when test="normalize-space(.) = '-'">
+        <span class="line">-</span>
+      </xsl:when>
+      <xsl:when test="normalize-space(.) = 'L'">
+        <span class="L">L</span>
+      </xsl:when>
+      <xsl:when test="normalize-space(.) = 'X'">
+        <span class="X">X</span>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates/>
+      </xsl:otherwise>
+    </xsl:choose>
   </span>
 </xsl:template>
 
