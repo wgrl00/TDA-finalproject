@@ -1,0 +1,299 @@
+body {
+    background-color: rgb(210, 229, 214);
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    text-indent: 6px;
+} 
+
+.row {
+    width: 100%;
+    margin-left: 0;
+}
+
+.col {
+  margin-left: 10px;
+  margin-right: 10px;
+  line-height: 30px;
+
+}
+
+.marginAdd {
+    display: none;
+}
+
+.mirador-canvas-nav {
+    display: none !important;
+}
+
+
+h1 {
+  text-align: center;
+  color: #84030e; 
+}
+ 
+
+.portraits figure {
+  margin: 0;
+  text-align: center;
+  color:rgb(0, 0, 0);
+  font-size: 0.8rem;
+}
+.portraits {
+  list-style: none;
+  display: flex;
+ justify-content: center;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+/* Frames for the images, found it here: https://charlottedann.com/article/fancy-frames-with-css > */
+.frame {
+  --corner: 12px;                   
+  border: var(--corner) solid transparent;
+  border-image-source: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" fill="black"><path d="M3 0h1a.5.5 0 0 1 0 1c0 1.1.9 2 2 2a.5.5 0 0 1 1 0v1a.5.5 0 0 1-1 0 2 2 0 0 0-2 2 .5.5 0 0 1 0 1H3a.5.5 0 0 1 0-1 2 2 0 0 0-2-2 .5.5 0 0 1-1 0V3a.5.5 0 0 1 1 0 2 2 0 0 0 2-2 .5.5 0 0 1 0-1Z" /></svg>');
+  border-image-slice: 3 fill;
+  border-image-repeat: stretch;
+  display: inline-block;               
+  padding: 0.5rem;                    
+}
+
+.frame img {
+  display: block;
+  max-width: 100%;
+  border: 8px solid #9f0404af; 
+}
+
+a {
+  color: #007b2f;
+}
+
+
+.site-header {
+  text-align: center;    
+  background-color: #ffffff;
+}
+.logo {
+  height: 100px;    
+  width: auto;
+}
+
+
+.navbar-nav {
+  width: 100%;            
+  display: flex;            
+  justify-content: center;
+ }
+
+
+ .description-block {
+    text-align: justify;
+    max-width: 50rem; 
+    font-size: larger;
+    margin: 0 auto;   
+}
+
+
+.space { 
+  height: 20px;
+}
+
+.footer_bottom {
+text-align: center;
+}
+
+.introduction {
+  text-align:center;
+}
+
+
+table {
+  border: 1px solid black;
+  border-radius: 10px;
+  border-collapse: separate; 
+  border-style:dotted;
+  overflow: hidden;
+    line-height: 1.5;
+}
+
+th, td {
+  border: 1px solid black;
+  background-color: #84030e5d;
+  text-align: center;
+  border-radius:20px;
+}
+
+
+.layout{
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 20px;
+  align-items: start;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.portraits img {
+  max-width: 100%;
+  height: auto;
+}
+
+.table_middle {
+  display: flex;
+  justify-content: center;
+}
+
+
+input[type="button"] {
+  padding: 6px 12px;
+  background-color: #cc8c99;
+  border: 2px solid #a7000000;
+  border-radius: 8px;
+  box-shadow:5px 8px 16px 0 rgba(0,0,0,0.6);
+  font-size: 15px;
+  cursor: pointer;
+  position:fixed;
+  width: 100px;
+}
+
+input[type="button"][value="Previous"]{
+  bottom: 70px;
+  right: 16px;
+}
+
+input[type="button"][value="Next"]{
+  bottom: 16px;
+  right: 16px;
+}
+
+
+
+h2 {
+  text-align: left;
+  color: #3a744b; 
+  font-size: 40px;
+}
+
+
+
+h4 {
+  color: #3a744b;
+}
+
+
+
+.col h3 {
+  margin-bottom: 6px;   
+  margin-top: 0;
+  font-size: 1em;
+  color: #000000;
+}
+
+#pageTable {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+
+
+#folio::before {
+  padding-left: 23px;
+  content: "Folio: ";
+}
+
+
+.addition {
+  font-style: italic;
+}
+
+
+
+.addition.supralinear {
+  vertical-align: super;
+  font-size: 0.6em;
+}
+
+
+
+.deletion.crossedOut {
+  text-decoration: line-through;
+}
+
+
+.deletion.overwritten {
+  text-decoration: line-through;
+}
+
+
+.hi.circled {
+  border: 2px solid currentColor;
+  border-radius: 80%;
+  padding: 2px 6px;
+  line-height: 1;
+  text-align: center;
+  float: right;
+}
+
+.hi.right {
+  display: block;
+  text-align: right;
+  margin: 0;
+}
+
+
+.hi.indented {
+  display:inline-block; 
+  margin-left:1em;
+}
+
+.hi.indented2 {
+  display:inline-block;
+  margin-left:3em;
+}
+
+
+.sic {
+  display: inline;
+}
+
+.corr {
+  display: none;
+}
+
+
+
+.metamark.roof {
+  vertical-align: sub;
+  font-size: 0.8em;
+   font-weight: bold;
+}
+
+.metamark.line {
+  vertical-align: super;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.metamark.L {
+  font-weight: bold;
+}
+
+.metamark.X {
+  font-weight: bold;
+}
+
+
+.hi.u2 {
+  text-decoration-line: underline;
+  text-decoration-style: double;
+}
