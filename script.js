@@ -185,6 +185,12 @@ function toggleClean() {
   document.querySelectorAll(".corr").forEach(el => {
     el.style.display = cleanVisible ? "inline" : "none";
   });
+
+
+
+
+
+  
 }
 
 
