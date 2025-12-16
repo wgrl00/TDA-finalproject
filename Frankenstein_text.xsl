@@ -181,25 +181,27 @@
   <span class="metamark">
     <xsl:choose>
 
-      <xsl:when test=".//tei:hi[@rend='circled']"> <!-- because the hi circled is nested within metamarks -->
+      <!-- nested hi circled-->
+      <xsl:when test=".//tei:hi[@rend='circled']">
         <xsl:apply-templates/>
       </xsl:when>
 
-      <xsl:when test="normalize-space(.) = '^'">
+      <xsl:when test=". = '^'">
         <span class="roof">^</span>
       </xsl:when>
-      <xsl:when test="normalize-space(.) = '-'">
-        <span class="line">-</span>
+
+      <xsl:when test=". = '-'">
+        <span class="dash">-</span>
       </xsl:when>
-      <xsl:when test="normalize-space(.) = 'L'">
+
+      <xsl:when test=". = 'L'">
         <span class="L">L</span>
       </xsl:when>
-      <xsl:when test="normalize-space(.) = 'X'">
+
+      <xsl:when test=". = 'X'">
         <span class="X">X</span>
       </xsl:when>
-      <xsl:otherwise>
-        <xsl:apply-templates/>
-      </xsl:otherwise>
+
     </xsl:choose>
   </span>
 </xsl:template>
