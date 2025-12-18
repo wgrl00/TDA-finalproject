@@ -178,13 +178,8 @@
 
 <!-- all metamarks -->
 <xsl:template match="tei:metamark">
-  <span class="metamark">
+  <span class="metamarks">
     <xsl:choose>
-
-      <!-- nested hi circled-->
-      <xsl:when test=".//tei:hi[@rend='circled']">
-        <xsl:apply-templates/>
-      </xsl:when>
 
       <xsl:when test=". = '^'">
         <span class="roof">^</span>
@@ -201,6 +196,12 @@
       <xsl:when test=". = 'X'">
         <span class="X">X</span>
       </xsl:when>
+
+      <xsl:otherwise>  <!--for pagenumbers-->
+        <span class="other">
+        <xsl:apply-templates/>
+        </span>
+      </xsl:otherwise>
 
     </xsl:choose>
   </span>

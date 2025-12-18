@@ -206,7 +206,6 @@ h4 {
 }
 
 
-
 #folio::before {
   padding-left: 23px;
   content: "Folio: ";
@@ -216,7 +215,6 @@ h4 {
 .addition {
   font-style: italic;
 }
-
 
 
 .addition.supralinear {
@@ -270,7 +268,6 @@ h4 {
 .corr {
   display: none;
 }
-
 
 
 .roof {

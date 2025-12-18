@@ -100,12 +100,8 @@ function documentLoader() {
   var visible_mary = document.getElementsByClassName('#MWS');
   var visible_percy = document.getElementsByClassName('#PBS');
   // Convert the HTMLCollection to an array for forEach compatibility
-
-
-
   var MaryArray = Array.from(visible_mary);
   var PercyArray = Array.from(visible_percy);
-
     if (event.target.value == 'both') {
       [MaryArray, PercyArray].forEach(arr => {
         arr.forEach(el => {
@@ -130,7 +126,6 @@ function documentLoader() {
 // write another function that will toggle the display of the deletions by clicking on a button
 
 let deletionsVisible = true;
-
 function toggleDel() {
   deletionsVisible = !deletionsVisible;
   const deletions = document.querySelectorAll("del, .deletion");
@@ -164,7 +159,6 @@ function toggleMetamarks() {
 // Corrected text button
 
 let cleanVisible = false;
-
 function toggleClean() {
   cleanVisible = !cleanVisible;
 
